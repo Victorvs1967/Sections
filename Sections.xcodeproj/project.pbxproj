@@ -13,6 +13,7 @@
 		D33ED9441FD4278C002DE883 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D33ED9431FD4278C002DE883 /* Assets.xcassets */; };
 		D33ED9471FD4278C002DE883 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D33ED9451FD4278C002DE883 /* LaunchScreen.storyboard */; };
 		D33ED9561FD429A7002DE883 /* sortednames.plist in Resources */ = {isa = PBXBuildFile; fileRef = D33ED9551FD429A7002DE883 /* sortednames.plist */; };
+		D33ED9581FD4356F002DE883 /* SearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33ED9571FD4356F002DE883 /* SearchResultsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D33ED9461FD4278C002DE883 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D33ED9481FD4278C002DE883 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D33ED9551FD429A7002DE883 /* sortednames.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = sortednames.plist; path = "../../../beg-iphone-dev-w-swift-3/08_AllSource/Sections/Sections/sortednames.plist"; sourceTree = "<group>"; };
+		D33ED9571FD4356F002DE883 /* SearchResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				D33ED93E1FD4278C002DE883 /* ViewController.swift */,
+				D33ED9571FD4356F002DE883 /* SearchResultsController.swift */,
 				D33ED9401FD4278C002DE883 /* Main.storyboard */,
 				D33ED9481FD4278C002DE883 /* Info.plist */,
 				D33ED94E1FD4279C002DE883 /* Supporting Files */,
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D33ED93F1FD4278C002DE883 /* ViewController.swift in Sources */,
+				D33ED9581FD4356F002DE883 /* SearchResultsController.swift in Sources */,
 				D33ED93D1FD4278C002DE883 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,7 +13,9 @@ class ViewController: UIViewController, UITableViewDataSource {
   var sectionTableIdentifier = "SectionTableIdentifier"
   var names: [String: [String]]!
   var keys: [String]!
-
+  
+  var searchController: UISearchController!
+  
   @IBOutlet weak var tableView: UITableView!
   
   override func viewDidLoad() {
@@ -24,16 +26,32 @@ class ViewController: UIViewController, UITableViewDataSource {
     let nameDict = NSDictionary(contentsOfFile: path!)
     names = nameDict as! [String: [String]]
     keys = (nameDict!.allKeys as! [String]).sorted()
+    
+    let resultsController = SearchResultsController()
+    resultsController.names = names
+    resultsController.keys = keys
+    searchController = UISearchController(searchResultsController: resultsController)
+    
+    let searchBar = searchController.searchBar
+    searchBar.scopeButtonTitles = ["All", "Short", "Long"]
+    searchBar.placeholder = "Enter a search term"
+    searchBar.sizeToFit()
+    tableView.tableHeaderView = searchBar
+    searchController.searchResultsUpdater = resultsController
   }
-
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-
+  
   // MARK: Table Data Source
   func numberOfSections(in tableView: UITableView) -> Int {
     return keys.count
+  }
+  
+  func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+    return keys
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
